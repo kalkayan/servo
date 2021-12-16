@@ -14,7 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package main
+package servo
+
+import "fmt"
 
 /*
 
@@ -26,8 +28,15 @@ package main
 |_______/    |_______|| _| `._____|   \__/     \______/
 
 
-Servo is a REST-based go server framework (micro) for creating high-performance
-API applications. It's a good starting point for developers, allowing them to
-focus on creating something amazing while the servo sweat over the smaller
-details.
+ Servo is a REST-based go server framework (micro) for creating high-performance
+ API applications. It's a good starting point for developers, allowing them to
+ focus on creating something amazing while the servo sweat over the smaller
+ details.
 */
+
+// Hello returns a greeting for the named person.
+func Hello(name string) string {
+	// Return a greeting that embeds the name in a message.
+	message := fmt.Sprintf("Hi, %v. Welcome!", name)
+	return message
+}
